@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prashant Kumar Tiwari | Supply Chain & Logistics</title>
+
+    <meta name="description"
+        content="Prashant Kumar Tiwari - Supply Chain, Logistics, Warehouse and Distribution Operations Professional">
+
+    <style>
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #06151d;
+            color: #eaf4f7;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+            --bg: #06151d;
+            --bg-dark: #041018;
+            --bg-card: #081c25;
+            --text: #edf7fa;
+            --muted: #78919c;
+            --muted-light: #9bb0b8;
+            --line: rgba(151, 193, 204, 0.16);
+            --cyan: #12d6d6;
+            --cyan-dark: #08aeb2;
+        }
+
+
+        /* =====================================================
+           GRID BACKGROUND
+        ===================================================== */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+
+            background-image:
+                linear-gradient(rgba(117, 166, 179, 0.035) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(117, 166, 179, 0.035) 1px, transparent 1px);
+
+            background-size: 52px 52px;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+
+            z-index: 1000;
+
+            background: rgba(4, 16, 24, 0.92);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-container {
+            max-width: 1060px;
+            height: 100%;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 20px;
+        }
+
+
+        /* Logo */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-box {
+            width: 34px;
+            height: 34px;
+
+            background: #eef6f8;
+            color: #07151d;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .logo-name {
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .logo-sub {
+            display: block;
+            margin-top: 2px;
+
+            font-size: 8px;
+            letter-spacing: 1.2px;
+
+            color: #607b86;
+        }
+
+
+        /* Navigation */
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+        }
+
+        nav a {
+            color: #718a94;
+
+            font-size: 9px;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--cyan);
+        }
+
+        .connect-link {
+            margin-left: 20px;
+            padding-left: 20px;
+
+            border-left: 1px solid var(--line);
+
+            font-size: 14px;
+            color: #dce8eb;
+        }
+
+
+        /* Mobile Menu */
+
+        .menu-btn {
+            display: none;
+
+            background: none;
+            border: 0;
+
+            color: white;
+            font-size: 25px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           GENERAL
+        ===================================================== */
+
+        section {
+            position: relative;
+            max-width: 1060px;
+            margin: auto;
+            padding: 130px 20px;
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-bottom: 18px;
+
+            color: var(--cyan);
+
+            font-size: 9px;
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .section-label::before {
+            content: "";
+
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+            background: var(--cyan);
+
+            box-shadow: 0 0 12px var(--cyan);
+        }
+
+        .large-title {
+            font-size: clamp(55px, 7vw, 92px);
+            line-height: 0.92;
+            letter-spacing: -4px;
+            font-weight: 800;
+        }
+
+        .italic {
+            font-family: Georgia, "Times New Roman", serif;
+            font-style: italic;
+            font-weight: 400;
+            color: #8ca6b0;
+        }
+
+        .description {
+            color: var(--muted-light);
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 520px;
+        }
+
+
+        /* =====================================================
+           BUTTONS
+        ===================================================== */
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+
+            margin-top: 28px;
+        }
+
+        .btn {
+            min-height: 42px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0 20px;
+
+            border: 1px solid var(--line);
+
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--cyan);
+            color: #04151b;
+            border-color: var(--cyan);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(18, 214, 214, 0.18);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        #overview {
+            min-height: 760px;
+
+            padding-top: 190px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-location {
+            margin-bottom: 25px;
+
+            color: #78949e;
+
+            font-size: 9px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .hero-location::before {
+            content: "";
+            display: inline-block;
+
+            width: 7px;
+            height: 7px;
+
+            margin-right: 9px;
+
+            border-radius: 50%;
+            background: var(--cyan);
+            box-shadow: 0 0 12px var(--cyan);
+        }
+
+        .hero-title {
+            font-size: clamp(62px, 7vw, 105px);
+            line-height: 0.84;
+            letter-spacing: -6px;
+            font-weight: 800;
+        }
+
+        .hero-title .italic {
+            display: block;
+            font-size: 0.83em;
+            margin: 7px 0;
+        }
+
+        .hero-text {
+            margin-top: 32px;
+            max-width: 510px;
+
+            color: #8ca4ad;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           3D LOGISTICS VISUAL
+        ===================================================== */
+
+        .hero-visual {
+            height: 450px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+        }
+
+        .orbit {
+            width: 180px;
+            height: 180px;
+
+            position: relative;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle at 35% 30%,
+                    #32e1dd,
+                    #0aa5a9 45%,
+                    #07646e 75%,
+                    #05343d);
+
+            box-shadow:
+                0 0 35px rgba(18, 214, 214, 0.25),
+                inset -20px -20px 40px rgba(0, 0, 0, 0.3);
+
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .orbit::before {
+            content: "";
+
+            position: absolute;
+            width: 280px;
+            height: 75px;
+
+            left: -50px;
+            top: 52px;
+
+            border: 1px solid rgba(18, 214, 214, 0.35);
+
+            border-radius: 50%;
+
+            transform: rotate(-5deg);
+        }
+
+        .orbit::after {
+            content: "";
+
+            position: absolute;
+            width: 100px;
+            height: 290px;
+
+            left: 40px;
+            top: -55px;
+
+            border: 1px dashed rgba(18, 214, 214, 0.25);
+
+            border-radius: 50%;
+
+            transform: rotate(10deg);
+        }
+
+        .orbit-text {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-direction: column;
+
+            color: #03151a;
+        }
+
+        .orbit-years {
+            font-size: 31px;
+            font-weight: 800;
+        }
+
+        .orbit-small {
+            font-size: 8px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .particle {
+            position: absolute;
+
+            width: 10px;
+            height: 10px;
+
+            border-radius: 50%;
+
+            background: var(--cyan);
+            box-shadow: 0 0 18px var(--cyan);
+
+            animation: particleMove 5s ease-in-out infinite;
+        }
+
+        .p1 {
+            top: 80px;
+            right: 100px;
+        }
+
+        .p2 {
+            top: 170px;
+            left: 70px;
+            animation-delay: 1s;
+        }
+
+        .p3 {
+            bottom: 90px;
+            right: 115px;
+            animation-delay: 2s;
+        }
+
+        .p4 {
+            bottom: 160px;
+            left: 115px;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(5deg);
+            }
+        }
+
+        @keyframes particleMove {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(12px, -15px);
+            }
+        }
+
+
+        /* =====================================================
+           KPI
+        ===================================================== */
+
+        .kpi-section {
+            padding-top: 25px;
+            padding-bottom: 80px;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .kpi {
+            padding: 34px 20px;
+
+            border-right: 1px solid var(--line);
+        }
+
+        .kpi:last-child {
+            border-right: 0;
+        }
+
+        .kpi-number {
+            font-size: 29px;
+            font-weight: 800;
+            color: #edf7fa;
+        }
+
+        .kpi-label {
+            margin-top: 5px;
+
+            color: #607983;
+
+            font-size: 7px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           EXPERIENCE
+        ===================================================== */
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 0.8fr 1.4fr;
+            gap: 80px;
+        }
+
+        .experience-list {
+            border-top: 1px solid var(--line);
+        }
+
+        .experience-card {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .experience-header {
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: 95px 1fr 20px;
+
+            padding: 25px 0;
+
+            background: none;
+            border: 0;
+
+            color: white;
+
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .experience-date {
+            color: var(--cyan);
+
+            font-size: 9px;
+            letter-spacing: 1px;
+        }
+
+        .experience-company {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .experience-role {
+            margin-top: 4px;
+
+            color: #647d87;
+            font-size: 10px;
+        }
+
+        .experience-icon {
+            color: var(--cyan);
+            font-size: 16px;
+        }
+
+        .experience-content {
+            display: none;
+            padding: 0 0 28px 95px;
+        }
+
+        .experience-card.open .experience-content {
+            display: block;
+            animation: openCard 0.3s ease;
+        }
+
+        @keyframes openCard {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .experience-content p {
+            color: #829aa3;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+
+            margin-top: 18px;
+        }
+
+        .tag {
+            padding: 7px 10px;
+
+            border: 1px solid var(--line);
+
+            color: #718992;
+
+            font-size: 8px;
+        }
+
+        .experience-stats {
+            display: flex;
+            gap: 35px;
+
+            margin-top: 22px;
+        }
+
+        .stat strong {
+            display: block;
+
+            font-size: 20px;
+        }
+
+        .stat span {
+            color: #607983;
+
+            font-size: 7px;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           EXPERTISE
+        ===================================================== */
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.4fr;
+            gap: 70px;
+        }
+
+        .toolkit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line);
+        }
+
+        .tool-card {
+            min-height: 190px;
+
+            padding: 28px;
+
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+
+            transition: 0.3s;
+        }
+
+        .tool-card:hover {
+            background: rgba(18, 214, 214, 0.025);
+        }
+
+        .tool-number {
+            color: var(--cyan);
+
+            font-size: 8px;
+        }
+
+        .tool-card h3 {
+            margin: 28px 0 15px;
+
+            font-size: 17px;
+        }
+
+        .tool-card ul {
+            list-style: none;
+        }
+
+        .tool-card li {
+            margin: 8px 0;
+
+            color: #6e8993;
+
+            font-size: 10px;
+        }
+
+        .tool-card li::before {
+            content: "—";
+            color: var(--cyan);
+            margin-right: 9px;
+        }
+
+
+        /* =====================================================
+           IMPACT
+        ===================================================== */
+
+        .impact-intro {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+
+            margin-bottom: 70px;
+        }
+
+        .impact-list {
+            border-top: 1px solid var(--line);
+        }
+
+        .impact-row {
+            display: grid;
+            grid-template-columns: 60px 1fr 130px;
+            gap: 20px;
+
+            align-items: center;
+
+            padding: 28px 0;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .impact-number {
+            color: var(--cyan);
+            font-size: 8px;
+        }
+
+        .impact-row h3 {
+            font-size: 15px;
+        }
+
+        .impact-row p {
+            margin-top: 5px;
+
+            color: #6f8993;
+            font-size: 10px;
+        }
+
+        .impact-value {
+            color: var(--cyan);
+
+            font-size: 24px;
+            font-weight: 800;
+
+            text-align: right;
+        }
+
+        .impact-value span {
+            display: block;
+
+            color: #58737d;
+
+            font-size: 6px;
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           CAREER
+        ===================================================== */
+
+        .career-title {
+            max-width: 750px;
+        }
+
+        .timeline {
+            position: relative;
+
+            max-width: 780px;
+            margin: 80px auto 0;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+
+            left: 50%;
+
+            width: 1px;
+
+            background: var(--line);
+        }
+
+        .timeline-item {
+            position: relative;
+
+            width: 50%;
+
+            padding: 0 45px 75px;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            top: 3px;
+
+            width: 11px;
+            height: 11px;
+
+            border: 2px solid var(--cyan);
+
+            border-radius: 50%;
+
+            background: var(--bg);
+
+            box-shadow: 0 0 10px rgba(18, 214, 214, 0.4);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -6px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -5px;
+        }
+
+        .timeline-year {
+            color: var(--cyan);
+
+            font-size: 8px;
+            letter-spacing: 1.2px;
+        }
+
+        .timeline-item h3 {
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        .timeline-role {
+            margin-top: 4px;
+
+            color: #78929c;
+            font-size: 10px;
+        }
+
+        .timeline-description {
+            margin-top: 18px;
+
+            color: #6d8791;
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           TECHNOLOGY
+        ===================================================== */
+
+        .technology {
+            background: rgba(5, 19, 27, 0.65);
+        }
+
+        .technology-inner {
+            max-width: 1060px;
+            margin: auto;
+
+            padding: 110px 20px;
+
+            display: grid;
+            grid-template-columns: 0.8fr 1.4fr;
+            gap: 70px;
+        }
+
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            align-content: flex-start;
+        }
+
+        .tech-item {
+            min-height: 94px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 15px;
+
+            border: 1px solid var(--line);
+
+            color: #78939d;
+
+            font-size: 10px;
+
+            transition: 0.3s;
+        }
+
+        .tech-item:hover {
+            color: var(--cyan);
+            border-color: rgba(18, 214, 214, 0.4);
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-box {
+            position: relative;
+            overflow: hidden;
+
+            padding: 75px 65px;
+
+            border: 1px solid rgba(18, 214, 214, 0.16);
+
+            background:
+                radial-gradient(circle at 90% 100%,
+                    rgba(18, 214, 214, 0.12),
+                    transparent 40%),
+                #09232d;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .contact-title {
+            font-size: clamp(45px, 5vw, 70px);
+            line-height: 0.95;
+            letter-spacing: -3px;
+        }
+
+        .contact-text {
+            margin-top: 22px;
+
+            max-width: 470px;
+
+            color: #8ba2aa;
+            font-size: 13px;
+        }
+
+        .contact-right small {
+            color: #587580;
+
+            font-size: 7px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .email-link {
+            display: inline-block;
+
+            margin-top: 12px;
+            padding-bottom: 8px;
+
+            border-bottom: 1px solid var(--cyan);
+
+            color: #edf8fa;
+
+            font-size: 27px;
+        }
+
+        .contact-info {
+            margin-top: 22px;
+
+            display: flex;
+            gap: 30px;
+
+            color: #587580;
+
+            font-size: 8px;
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           RESUME
+        ===================================================== */
+
+        .resume-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+
+            margin-top: 28px;
+        }
+
+        .resume-view {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .resume-download {
+            background: var(--cyan);
+            color: #04151b;
+
+            border-color: var(--cyan);
+
+            font-weight: 800;
+        }
+
+        .resume-view:hover {
+            color: var(--cyan);
+            border-color: var(--cyan);
+        }
+
+        .resume-download:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(18, 214, 214, 0.2);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            max-width: 1060px;
+            margin: auto;
+
+            padding: 30px 20px 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            border-top: 1px solid var(--line);
+
+            color: #536d77;
+
+            font-size: 7px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .back-top {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .back-top:hover {
+            color: var(--cyan);
+        }
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            header {
+                height: 65px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+
+                top: 65px;
+                left: 0;
+                right: 0;
+
+                display: none;
+
+                flex-direction: column;
+                align-items: stretch;
+
+                gap: 0;
+
+                background: rgba(4, 16, 24, 0.98);
+
+                border-bottom: 1px solid var(--line);
+            }
+
+            nav.open {
+                display: flex;
+            }
+
+            nav a {
+                padding: 16px 25px;
+
+                border-bottom: 1px solid var(--line);
+            }
+
+            .connect-link {
+                margin: 0;
+                padding: 16px 25px;
+
+                border-left: 0;
+            }
+
+            section {
+                padding: 90px 20px;
+            }
+
+            #overview {
+                min-height: auto;
+
+                padding-top: 130px;
+
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: clamp(55px, 15vw, 85px);
+            }
+
+            .hero-visual {
+                height: 350px;
+            }
+
+            .kpi-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .kpi {
+                border-bottom: 1px solid var(--line);
+            }
+
+            .kpi:nth-child(2) {
+                border-right: 0;
+            }
+
+            .kpi:last-child {
+                grid-column: span 2;
+                border-right: 0;
+            }
+
+            .two-column,
+            .expertise-grid,
+            .technology-inner {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .impact-intro {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .impact-row {
+                grid-template-columns: 35px 1fr;
+            }
+
+            .impact-value {
+                grid-column: 2;
+                text-align: left;
+            }
+
+            .timeline::before {
+                left: 8px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                width: 100%;
+                margin-left: 0;
+
+                padding-left: 40px;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 3px;
+                right: auto;
+            }
+
+            .contact-box {
+                padding: 50px 30px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .email-link {
+                font-size: 20px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 18px;
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .logo-name {
+                font-size: 12px;
+            }
+
+            .logo-sub {
+                font-size: 7px;
+            }
+
+            .large-title {
+                font-size: 55px;
+                letter-spacing: -3px;
+            }
+
+            .hero-title {
+                font-size: 55px;
+                letter-spacing: -4px;
+            }
+
+            .toolkit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-header {
+                grid-template-columns: 75px 1fr 20px;
+            }
+
+            .experience-content {
+                padding-left: 75px;
+            }
+
+            .experience-stats {
+                gap: 20px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation: none !important;
+                transition: none !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header>
+
+        <div class="nav-container">
+
+            <a href="#overview" class="logo">
+
+                <div class="logo-box">
+                    PK
+                </div>
+
+                <div>
+                    <div class="logo-name">
+                        Prashant Tiwari
+                    </div>
+
+                    <span class="logo-sub">
+                        SUPPLY CHAIN / LOGISTICS
+                    </span>
+                </div>
+
+            </a>
+
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+
+            <nav id="navigation">
+
+                <a href="#overview">Overview</a>
+
+                <a href="#experience">Experience</a>
+
+                <a href="#expertise">Expertise</a>
+
+                <a href="#impact">Impact</a>
+
+                <a href="#career">Career</a>
+
+                <a href="#contact">Contact</a>
+
+                <a href="#contact" class="connect-link">
+                    Let's Connect ↗
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section id="overview">
+
+        <div class="reveal">
+
+            <div class="hero-location">
+                CURRENTLY AT TRENT LTD. · VAPI, GUJARAT
+            </div>
+
+            <h1 class="hero-title">
+
+                Moving the
+
+                <span class="italic">
+                    right things
+                </span>
+
+                forward.
+
+            </h1>
+
+            <p class="hero-text">
+                Supply chain and logistics operations professional with
+                13+ years of experience across distribution centers,
+                transportation, warehouse systems and retail replenishment.
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#experience" class="btn btn-primary">
+                    VIEW EXPERIENCE ↓
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    DOWNLOAD RESUME ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- 3D VISUAL -->
+
+        <div class="hero-visual reveal">
+
+            <div class="particle p1"></div>
+            <div class="particle p2"></div>
+            <div class="particle p3"></div>
+            <div class="particle p4"></div>
+
+            <div class="orbit">
+
+                <div class="orbit-text">
+
+                    <div class="orbit-years">
+                        13+
+                    </div>
+
+                    <div class="orbit-small">
+                        YEARS
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         KPI
+    ===================================================== -->
+
+    <section class="kpi-section">
+
+        <div class="kpi-grid reveal">
+
+            <div class="kpi">
+
+                <div class="kpi-number">
+                    <span class="counter" data-target="13">
+                        0
+                    </span>+
+                </div>
+
+                <div class="kpi-label">
+                    Years Experience
+                </div>
+
+            </div>
+
+
+            <div class="kpi">
+
+                <div class="kpi-number">
+                    <span class="counter" data-target="75">
+                        0
+                    </span>+
+                </div>
+
+                <div class="kpi-label">
+                    Personnel Led
+                </div>
+
+            </div>
+
+
+            <div class="kpi">
+
+                <div class="kpi-number">
+                    <span class="counter" data-target="1000">
+                        0
+                    </span>+
+                </div>
+
+                <div class="kpi-label">
+                    Retail Storefronts
+                </div>
+
+            </div>
+
+
+            <div class="kpi">
+
+                <div class="kpi-number">
+                    ₹550Cr
+                </div>
+
+                <div class="kpi-label">
+                    Operational Volume
+                </div>
+
+            </div>
+
+
+            <div class="kpi">
+
+                <div class="kpi-number">
+                    ₹23L
+                </div>
+
+                <div class="kpi-label">
+                    Loss Reduction
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXPERIENCE
+    ===================================================== -->
+
+    <section id="experience">
+
+        <div class="two-column">
+
+            <div class="reveal">
+
+                <div class="section-label">
+                    01 / THE ROUTE
+                </div>
+
+                <h2 class="large-title">
+
+                    Experience
+                    that
+                    <span class="italic">
+                        keeps
+                    </span>
+                    moving.
+
+                </h2>
+
+                <p class="description" style="margin-top:30px;">
+
+                    From transportation networks to high-volume
+                    retail distribution, each role has added another
+                    layer of operational perspective.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="experience-list reveal">
+
+
+                <!-- EXPERIENCE 1 -->
+
+                <div class="experience-card open">
+
+                    <button class="experience-header">
+
+                        <div class="experience-date">
+                            2018 — NOW
+                        </div>
+
+                        <div>
+
+                            <div class="experience-company">
+                                Trent Ltd.
+                            </div>
+
+                            <div class="experience-role">
+                                Assistant Manager — Warehouse & Logistics Operations
+                            </div>
+
+                        </div>
+
+                        <div class="experience-icon">
+                            ×
+                        </div>
+
+                    </button>
+
+
+                    <div class="experience-content">
+
+                        <p>
+                            Lead Distribution Center operations,
+                            workforce execution, vehicle planning,
+                            outbound logistics, reverse logistics,
+                            risk mitigation and operational reporting
+                            across a large retail distribution network.
+                        </p>
+
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Team Leadership
+                            </span>
+
+                            <span class="tag">
+                                Vehicle Planning
+                            </span>
+
+                            <span class="tag">
+                                SAP / WMS
+                            </span>
+
+                            <span class="tag">
+                                MIS / KPI
+                            </span>
+
+                            <span class="tag">
+                                Reverse Logistics
+                            </span>
+
+                            <span class="tag">
+                                5S / Kaizen
+                            </span>
+
+                        </div>
+
+
+                        <div class="experience-stats">
+
+                            <div class="stat">
+
+                                <strong>
+                                    75+
+                                </strong>
+
+                                <span>
+                                    Personnel
+                                </span>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <strong>
+                                    1,000+
+                                </strong>
+
+                                <span>
+                                    Storefronts
+                                </span>
+
+                            </div>
+
+
+                            <div class="stat">
+
+                                <strong>
+                                    ₹550Cr
+                                </strong>
+
+                                <span>
+                                    Annual Volume
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXPERIENCE 2 -->
+
+                <div class="experience-card">
+
+                    <button class="experience-header">
+
+                        <div class="experience-date">
+                            EARLIER
+                        </div>
+
+                        <div>
+
+                            <div class="experience-company">
+                                Trent Ltd.
+                            </div>
+
+                            <div class="experience-role">
+                                Executive — Internal Career Progression
+                            </div>
+
+                        </div>
+
+                        <div class="experience-icon">
+                            +
+                        </div>
+
+                    </button>
+
+                    <div class="experience-content">
+
+                        <p>
+                            Progressed through operational responsibilities
+                            supporting warehouse, logistics and distribution
+                            activities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXPERIENCE 3 -->
+
+                <div class="experience-card">
+
+                    <button class="experience-header">
+
+                        <div class="experience-date">
+                            2015 — 2018
+                        </div>
+
+                        <div>
+
+                            <div class="experience-company">
+                                Rivigo Services Pvt. Ltd.
+                            </div>
+
+                            <div class="experience-role">
+                                Pit Stop Executive — Transportation Operations
+                            </div>
+
+                        </div>
+
+                        <div class="experience-icon">
+                            +
+                        </div>
+
+                    </button>
+
+                    <div class="experience-content">
+
+                        <p>
+                            Transportation coordination, line-haul
+                            operations, safety and compliance activities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EXPERIENCE 4 -->
+
+                <div class="experience-card">
+
+                    <button class="experience-header">
+
+                        <div class="experience-date">
+                            2012 — 2015
+                        </div>
+
+                        <div>
+
+                            <div class="experience-company">
+                                Om Logistics Ltd.
+                            </div>
+
+                            <div class="experience-role">
+                                Executive — Shipping & Logistics Operations
+                            </div>
+
+                        </div>
+
+                        <div class="experience-icon">
+                            +
+                        </div>
+
+                    </button>
+
+                    <div class="experience-content">
+
+                        <p>
+                            Shipping, warehouse handling, cargo visibility
+                            and space optimization responsibilities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXPERTISE
+    ===================================================== -->
+
+    <section id="expertise">
+
+        <div class="expertise-grid">
+
+            <div class="reveal">
+
+                <div class="section-label">
+                    02 / THE TOOLKIT
+                </div>
+
+                <h2 class="large-title">
+
+                    Operational
+                    <span class="italic">
+                        command.
+                    </span>
+
+                </h2>
+
+                <p class="description" style="margin-top:30px;">
+
+                    A practical operating toolkit built across
+                    warehouse, logistics, control and reporting.
+
+                </p>
+
+            </div>
+
+
+            <div class="toolkit-grid reveal">
+
+
+                <div class="tool-card">
+
+                    <div class="tool-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Warehouse
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Distribution Center Management
+                        </li>
+
+                        <li>
+                            Inventory Control
+                        </li>
+
+                        <li>
+                            Space Optimization
+                        </li>
+
+                        <li>
+                            5S - Kaizen - SOPs
+                        </li>
+
+                        <li>
+                            Material Handling
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="tool-card">
+
+                    <div class="tool-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Logistics
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Outbound Logistics
+                        </li>
+
+                        <li>
+                            Transportation Management
+                        </li>
+
+                        <li>
+                            Vehicle Planning
+                        </li>
+
+                        <li>
+                            Fleet Coordination
+                        </li>
+
+                        <li>
+                            Store Replenishment
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="tool-card">
+
+                    <div class="tool-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Control
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            Reverse Logistics
+                        </li>
+
+                        <li>
+                            Vendor & Carrier Management
+                        </li>
+
+                        <li>
+                            Risk Mitigation
+                        </li>
+
+                        <li>
+                            Loss Prevention
+                        </li>
+
+                        <li>
+                            Budget Planning
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="tool-card">
+
+                    <div class="tool-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Reporting
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            MIS Reporting
+                        </li>
+
+                        <li>
+                            KPI Reporting
+                        </li>
+
+                        <li>
+                            Operational Performance
+                        </li>
+
+                        <li>
+                            Attendance Reporting
+                        </li>
+
+                        <li>
+                            Daily Reporting
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         IMPACT
+    ===================================================== -->
+
+    <section id="impact">
+
+        <div class="impact-intro reveal">
+
+            <div>
+
+                <div class="section-label">
+                    03 / THE DIFFERENCE
+                </div>
+
+                <h2 class="large-title">
+
+                    Measured
+                    in
+                    <span class="italic">
+                        outcomes.
+                    </span>
+
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p class="description">
+
+                    Strong operations are ultimately measured through
+                    visibility, control, risk reduction, scale and
+                    reliable execution.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="impact-list reveal">
+
+
+            <div class="impact-row">
+
+                <div class="impact-number">
+                    01
+                </div>
+
+                <div>
+
+                    <h3>
+                        Loss prevention & risk control
+                    </h3>
+
+                    <p>
+                        Security controls and risk-mitigation measures
+                        contributed to a reduction in fire and
+                        theft-related losses.
+                    </p>
+
+                </div>
+
+                <div class="impact-value">
+
+                    ₹23L
+
+                    <span>
+                        LOSS REDUCTION
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="impact-row">
+
+                <div class="impact-number">
+                    02
+                </div>
+
+                <div>
+
+                    <h3>
+                        Pan-India vehicle planning
+                    </h3>
+
+                    <p>
+                        Daily transportation coordination and store
+                        replenishment support across a large
+                        multi-region retail network.
+                    </p>
+
+                </div>
+
+                <div class="impact-value">
+
+                    1,000+
+
+                    <span>
+                        STOREFRONTS SUPPORTED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="impact-row">
+
+                <div class="impact-number">
+                    03
+                </div>
+
+                <div>
+
+                    <h3>
+                        Large-scale operations
+                    </h3>
+
+                    <p>
+                        Operational planning, resource allocation and
+                        execution for significant annualized business
+                        volume.
+                    </p>
+
+                </div>
+
+                <div class="impact-value">
+
+                    ₹550Cr
+
+                    <span>
+                        OPERATIONAL VOLUME
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="impact-row">
+
+                <div class="impact-number">
+                    04
+                </div>
+
+                <div>
+
+                    <h3>
+                        Workforce leadership
+                    </h3>
+
+                    <p>
+                        Leadership of executives and operational
+                        supervisors supporting Distribution Center
+                        performance and service continuity.
+                    </p>
+
+                </div>
+
+                <div class="impact-value">
+
+                    75+
+
+                    <span>
+                        PERSONNEL LED
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CAREER
+    ===================================================== -->
+
+    <section id="career">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                04 / CAREER ROUTE
+            </div>
+
+            <h2 class="large-title career-title">
+
+                A career built
+                through
+                <span class="italic">
+                    operations.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="timeline reveal">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    2012 — 2015
+                </div>
+
+                <h3>
+                    Om Logistics Ltd.
+                </h3>
+
+                <div class="timeline-role">
+                    Executive — Shipping & Logistics Operations
+                </div>
+
+                <p class="timeline-description">
+                    Shipping, warehouse handling, cargo visibility
+                    and space optimization responsibilities.
+                </p>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    2015 — 2018
+                </div>
+
+                <h3>
+                    Rivigo Services Pvt. Ltd.
+                </h3>
+
+                <div class="timeline-role">
+                    Pit Stop Executive — Transportation Operations
+                </div>
+
+                <p class="timeline-description">
+                    Transportation coordination, line-haul operations,
+                    safety and compliance.
+                </p>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-year">
+                    2018 — PRESENT
+                </div>
+
+                <h3>
+                    Trent Ltd.
+                </h3>
+
+                <div class="timeline-role">
+                    Executive → Assistant Manager
+                </div>
+
+                <p class="timeline-description">
+                    Progressed through internal roles into Distribution
+                    Center leadership across warehouse, logistics,
+                    fleet planning, reporting and operational control.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TECHNOLOGY
+    ===================================================== -->
+
+    <section class="technology">
+
+        <div class="technology-inner">
+
+            <div class="reveal">
+
+                <div class="section-label">
+                    05 / SYSTEMS
+                </div>
+
+                <h2 class="large-title">
+
+                    Technology
+                    behind
+                    <span class="italic">
+                        execution.
+                    </span>
+
+                </h2>
+
+                <p class="description" style="margin-top:30px;">
+
+                    Enterprise and operational tools used across
+                    warehouse, transportation, reporting and
+                    productivity workflows.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="tech-grid reveal">
+
+                <div class="tech-item">
+                    SAP S/4HANA
+                </div>
+
+                <div class="tech-item">
+                    SAP HANA
+                </div>
+
+                <div class="tech-item">
+                    WMS
+                </div>
+
+                <div class="tech-item">
+                    TMS
+                </div>
+
+                <div class="tech-item">
+                    CargoFL
+                </div>
+
+                <div class="tech-item">
+                    Loginext
+                </div>
+
+                <div class="tech-item">
+                    Advanced MS Excel
+                </div>
+
+                <div class="tech-item">
+                    MS Word
+                </div>
+
+                <div class="tech-item">
+                    MS PowerPoint
+                </div>
+
+                <div class="tech-item">
+                    MIS Reporting
+                </div>
+
+                <div class="tech-item">
+                    KPI Tracking
+                </div>
+
+                <div class="tech-item">
+                    Operational Reporting
+                </div>
+
+                <div class="tech-item">
+                    5S
+                </div>
+
+                <div class="tech-item">
+                    Kaizen
+                </div>
+
+                <div class="tech-item">
+                    SOP Development
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ===================================================== -->
+
+    <section id="contact">
+
+        <div class="contact-box reveal">
+
+            <div class="contact-grid">
+
+
+                <div>
+
+                    <div class="section-label">
+                        06 / NEXT MOVE
+                    </div>
+
+                    <h2 class="contact-title">
+
+                        Let's make
+                        <br>
+
+                        <span class="italic">
+                            operations work.
+                        </span>
+
+                    </h2>
+
+                    <p class="contact-text">
+
+                        Open to conversations around supply chain,
+                        warehouse operations, logistics, distribution
+                        and operational leadership.
+
+                    </p>
+
+                </div>
+
+
+
+                <div class="contact-right">
+
+                    <small>
+                        REACH PRASHANT
+                    </small>
+
+
+                    <a
+                        href="mailto:prashant.tiwari@example.com"
+                        class="email-link"
+                    >
+                        Start a conversation ↗
+                    </a>
+
+
+                    <div class="contact-info">
+
+                        <span>
+                            VAPI, GUJARAT, INDIA
+                        </span>
+
+                        <span>
+                            SUPPLY CHAIN / LOGISTICS
+                        </span>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RESUME BUTTONS
+                    ================================================= -->
+
+                    <div class="resume-actions">
+
+
+                        <!-- VIEW RESUME -->
+
+                        <a
+                            href="Resume/Prashant%20Kumar%20Tiwari%281%29.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn resume-view"
+                        >
+                            VIEW RESUME ↗
+                        </a>
+
+
+                        <!-- DOWNLOAD RESUME -->
+
+                        <a
+                            href="Resume/Prashant%20Kumar%20Tiwari%281%29.pdf"
+                            download="Prashant-Kumar-Tiwari-Resume.pdf"
+                            class="btn resume-download"
+                        >
+                            DOWNLOAD RESUME ↓
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer>
+
+        <span>
+            PT / 2026
+        </span>
+
+        <span>
+            BUILT AROUND CLARITY, CONTROL & EXECUTION.
+        </span>
+
+        <span
+            class="back-top"
+            onclick="window.scrollTo({top:0, behavior:'smooth'})"
+        >
+            BACK TO TOP ↑
+        </span>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
+
+    <script>
+
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navigation = document.getElementById("navigation");
+
+        menuBtn.addEventListener("click", () => {
+
+            navigation.classList.toggle("open");
+
+        });
+
+
+        /* Close mobile menu after clicking */
+
+        document.querySelectorAll("nav a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navigation.classList.remove("open");
+
+            });
+
+        });
+
+
+
+        /* =====================================================
+           EXPERIENCE ACCORDION
+        ===================================================== */
+
+        const experienceCards =
+            document.querySelectorAll(".experience-card");
+
+        experienceCards.forEach(card => {
+
+            const header =
+                card.querySelector(".experience-header");
+
+            const icon =
+                card.querySelector(".experience-icon");
+
+            header.addEventListener("click", () => {
+
+                const isOpen =
+                    card.classList.contains("open");
+
+
+                /* Close all */
+
+                experienceCards.forEach(otherCard => {
+
+                    otherCard.classList.remove("open");
+
+                    const otherIcon =
+                        otherCard.querySelector(".experience-icon");
+
+                    otherIcon.textContent = "+";
+
+                });
+
+
+                /* Open selected */
+
+                if (!isOpen) {
+
+                    card.classList.add("open");
+
+                    icon.textContent = "×";
+
+                }
+
+            });
+
+        });
+
+
+
+        /* =====================================================
+           SCROLL REVEAL
+        ===================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            revealObserver.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(element => {
+
+            revealObserver.observe(element);
+
+        });
+
+
+
+        /* =====================================================
+           KPI COUNTERS
+        ===================================================== */
+
+        const counters =
+            document.querySelectorAll(".counter");
+
+        let countersStarted = false;
+
+
+        function startCounters() {
+
+            if (countersStarted) return;
+
+            countersStarted = true;
+
+
+            counters.forEach(counter => {
+
+                const target =
+                    Number(counter.dataset.target);
+
+                let current = 0;
+
+                const increment =
+                    Math.max(1, Math.ceil(target / 50));
+
+
+                const updateCounter = () => {
+
+                    current += increment;
+
+                    if (current >= target) {
+
+                        counter.textContent =
+                            target.toLocaleString();
+
+                        return;
+
+                    }
+
+                    counter.textContent =
+                        current.toLocaleString();
+
+                    requestAnimationFrame(
+                        updateCounter
+                    );
+
+                };
+
+
+                updateCounter();
+
+            });
+
+        }
+
+
+        const kpiSection =
+            document.querySelector(".kpi-section");
+
+
+        const counterObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    if (entries[0].isIntersecting) {
+
+                        startCounters();
+
+                        counterObserver.disconnect();
+
+                    }
+
+                },
+
+                {
+                    threshold: 0.3
+                }
+
+            );
+
+
+        counterObserver.observe(kpiSection);
+
+
+
+        /* =====================================================
+           ACTIVE NAVIGATION
+        ===================================================== */
+
+        const sections =
+            document.querySelectorAll("section[id]");
+
+        const navLinks =
+            document.querySelectorAll("nav a");
+
+
+        const activeObserver =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            navLinks.forEach(link => {
+
+                                link.classList.remove("active");
+
+                            });
+
+
+                            const activeLink =
+                                document.querySelector(
+                                    `nav a[href="#${entry.target.id}"]`
+                                );
+
+
+                            if (activeLink) {
+
+                                activeLink.classList.add("active");
+
+                            }
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.45
+                }
+
+            );
+
+
+        sections.forEach(section => {
+
+            activeObserver.observe(section);
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
